@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="donate1.css">
+    <title>Donate</title>
+ <div class="wrapper">
+            <div class="title">
+              DONATE NOW !
+            </div>
+            <div class="form">
+            	<form action="payscript.php" method="post" style="padding: 25px;">
+               <div class="inputfield">
+                  <label>First Name</label>
+                  <input type="text" name="name" class="input">
+               </div>  
+                <div class="inputfield">
+                  <label>Last Name</label>
+                  <input type="text" class="input">
+               </div>  
+                <div class="inputfield">
+                  <label>Gender</label>
+                  <div class="custom_select" style="margin-left: -0.8rem;">
+                    <select>
+                      <option value="">Select</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                  </div>
+               </div> 
+                <div class="inputfield">
+                  <label>Email Address</label>
+                  <input type="text" class="input" name="email">
+                  
+               </div> 
+               <input type="hidden" value="<?php echo 'OID'.rand(100,000);?>" name="orderid">
+               <input type="hidden" value="<?php echo 1;?>" name="amount">
+              <div class="inputfield">
+                  <label>Phone Number</label>
+                  <input type="text" class="input" name="contact">
+               </div> 
+              <div class="inputfield">
+                  <label>Donation Amount (INR)</label>
+                  <input type="number" class="input">
+               </div> 
+              <div class="inputfield terms">
+                  <label class="check">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <p>Agreed to terms and conditions</p>
+               </div> 
+              <div class="inputfield">
+                <input type="submit" value="DONATE" style="color: black;" class="btn">
+              </div>
+            </div>
+        </form>
+        </div>
+        
